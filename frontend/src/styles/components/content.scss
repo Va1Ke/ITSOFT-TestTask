@@ -1,0 +1,28 @@
+@media (max-width: $breakpoint-mobile) {
+  .general-content{
+    padding: $grid-base;
+    box-sizing: border-box;
+    &_mobile-navigation{
+      justify-content: space-between;
+      font-size: 18px;
+      display: flex;
+      color: $brand_white_color;
+    }
+    &_mobile-navigation div{
+      @include gray-border(2px);
+      padding: 4px;
+      border-radius: 5px;
+    }
+  }
+  .mobile-open{
+    left: 0;
+  }
+}
+@media (min-width: $breakpoint-desktop) {
+  .general-content{
+    display: flex;
+    &_mobile-navigation{
+      display: none;
+    }
+  }
+}
