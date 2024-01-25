@@ -1,0 +1,6 @@
+@media (min-width: $breakpoint-desktop) {
+  .grid-transaction{
+    display: grid;
+    grid-template-columns: 4rem 5rem 6rem 2rem;
+  }
+}

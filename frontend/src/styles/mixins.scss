@@ -1,0 +1,29 @@
+@mixin div-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $black_color;
+  font-family: Roboto, sans-serif;
+  border-radius: 5px;
+}
+
+@mixin absolute-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+@mixin input-number{
+  padding-left: 10px;
+  border-radius: 10px;
+  background-color: $gray_color;
+  border: solid 2px $gray_color;
+}
+
+@mixin gray-border($size: 1px){
+  border: solid $size $gray_color;
+}
+@mixin white-box-shadow($size: 0.5rem){
+  box-shadow: 0 0 $size $brand_white_color;
+}
+

@@ -1,0 +1,16 @@
+.general-footer{
+  z-index: 1;
+  width: 100%;
+  position: fixed;
+  background: $gray_color;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: $grid-base;
+  box-sizing: border-box;
+
+  &_copyright-text {
+    color: $brand_white_color;
+    font-size: $font-size-base;
+  }
+}

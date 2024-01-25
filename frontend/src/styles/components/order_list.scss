@@ -1,0 +1,47 @@
+@media (max-width: $breakpoint-mobile) {
+  .order-list {
+    z-index: 100;
+    position: absolute;
+    width: 100%;
+    left: -100vw;
+    transition: left 0.2s ease-in-out;
+    background-color: $brand_black_color;
+
+    &_order {
+      padding: 8px;
+      display: grid;
+      font-size: $font-size-small;
+      grid-template-columns: 14rem 16rem 2rem;
+      color: $brand_white_color;
+      @include gray-border;
+    }
+
+    &_close {
+      margin: 0 0 $grid-base $grid-base;
+      padding: 4px;
+      text-align: center;
+      font-size: 18px;
+      width: 4.5rem;
+      @include gray-border(2px);
+      border-radius: 5px;
+      color: $brand_white_color;
+    }
+  }
+}
+@media (min-width: $breakpoint-desktop) {
+  .order-list {
+          display: flex;
+      flex-direction: column;
+      font-size: $font-size-small;
+      &_close{
+        display: none;
+      }
+      &_order{
+        padding: 8px;
+        display: grid;
+        grid-template-columns: 12rem 12rem 8rem;
+        color: $brand_white_color;
+        @include gray-border;
+      }
+  }
+}

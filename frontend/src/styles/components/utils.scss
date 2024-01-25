@@ -1,0 +1,46 @@
+.arrow {
+  display: none;
+}
+.login:hover .arrow {
+  top: 30px;
+  right: 9px;
+  position: absolute;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+.none{
+  display: none;
+}
+.need-login{
+  opacity: 0.3;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+.sell{
+  background-color: $brand_sell_color;
+  opacity: 0.5;
+}
+.buy{
+  background-color: $brand_buy_color;
+  opacity: 0.5;
+}
+.overlay{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 100px;
+  left: -100vw;
+  transition: left 0.2s ease-in-out;
+  background-color: rgba(0,0,0,1);
+  z-index: 1;
+}
+.active-overlay {
+  left: 0;
+  z-index: 0;
+}

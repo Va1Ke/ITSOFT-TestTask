@@ -1,0 +1,71 @@
+@media (max-width: $breakpoint-mobile) {
+  .transaction-list {
+    margin-top: 8px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+
+    &_title {
+      color: $brand_white_color;
+      text-align: center;
+      font-size: $font-size-base;
+      margin: 8px;
+    }
+
+    &_block {
+      display: flex;
+
+      &_description {
+        display: flex;
+        justify-content: space-between;
+        @include gray-border;
+        color: $brand_white_color;
+      }
+
+      &_id {
+        color: $brand_white_color;
+      }
+
+      &_buy {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 5rem 1fr 6rem 2rem;
+      }
+
+      &_sell {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 5rem 1fr 6rem 2rem;
+      }
+    }
+  }
+}
+@media (min-width: $breakpoint-desktop) {
+  .transaction-list {
+    right: 0;
+    position: absolute;
+    font-size: 12px;
+    @include gray-border;
+
+    &_title {
+      color: $brand_white_color;
+      text-align: center;
+      font-size: $font-size-base;
+    }
+
+    &_block {
+      display: flex;
+
+      &_description {
+        display: flex;
+        justify-content: space-between;
+        @include gray-border;
+        color: $brand_white_color;
+      }
+
+      &_id {
+        color: $brand_white_color;
+      }
+    }
+  }
+}

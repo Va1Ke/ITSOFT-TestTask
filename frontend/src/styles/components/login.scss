@@ -1,0 +1,39 @@
+.login{
+  position: relative;
+}
+.login-icon{
+  display: flex;
+  position: relative;
+  width: 25px;
+  height: 28px;
+  background-image: url($login_icon);
+}
+.login-form{
+  display: none;
+}
+.login:hover .login-form{
+  top: 35px;
+  box-shadow: 0 0 0.5rem $brand_white_color;
+  border-radius: 5px;
+  position: absolute;
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  padding: 8px;
+  background-color: $brand_black_color;
+  @include gray-border(2px);
+  right: 0;
+  &_input{
+    border-radius: 5px;
+    background-color: $gray_color;
+    @include gray-border(2px);
+  }
+  &_btn{
+    border-radius: 5px;
+    min-width: 10rem;
+    background-color: $gray_color;
+    @include gray-border(2px);
+    @include white-box-shadow(0.3rem);
+    cursor: pointer;
+  }
+}
