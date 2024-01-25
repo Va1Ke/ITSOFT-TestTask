@@ -1,17 +1,22 @@
 import {FormControl, InputLabel, MenuItem, Select} from "@mui/material";
-import {useApp} from "../../AppContext.jsx";
+import {useApp, useAppDispatch} from "../../AppContext.jsx";
 import {useEffect, useState} from "react";
 import {axiosInstance} from "../../axios.js";
+import {initAppData} from "./Utils.js";
 
 export {OrderForm};
 
 function OrderForm() {
     const initData = useApp();
+    const dispatch = useAppDispatch();
     const [orderData, setOrderData] = useState({'stock': ''});
 
     useEffect(() =>{
         if (orderData['stock'].length > 0){
-            axiosInstance.post('api/order/', orderData).then()
+            axiosInstance.post('api/order/', orderData).then(response =>{
+                console.log('lol')
+                initAppData(dispatch)
+            })
         }
     }, [orderData['order_type']])
 
